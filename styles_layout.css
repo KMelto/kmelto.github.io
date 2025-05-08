@@ -8,7 +8,7 @@
 .form {
   background-color: #fffaf0;
   padding: 1em;
-  overflow-y: auto;
+  overflow: auto;
   position: relative;
   margin: 1em;
 }
