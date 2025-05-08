@@ -127,6 +127,12 @@ fieldset{
 	max-width: 300px;
 	display: none;
 }
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
 #clock, #countdown {
 	margin-top: 10px;
 	font-weight: bold;
