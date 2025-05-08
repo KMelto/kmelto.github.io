@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cat Adoption Form</title>
+    <link rel="stylesheet" href="styles_format.css">
+    <link rel="stylesheet" href="styles_layout.css">
+    <script>
+        window.addEventListener('DOMContentLoaded', () => {
+            const ageRange = document.getElementById('ageRange');
+            const ageValue = document.getElementById('ageValue');
+            const ageUnit = document.getElementById('ageUnit');
+            const catTypeInput = document.getElementById('catType');
+            const catImage = document.getElementById('catImage');
+
+            function updateAgeDisplay(value) {
+                if (value == 0) {
+                    ageValue.textContent = 'Kitten';
+                    ageUnit.style.display = 'none';
+                } else {
+                    ageValue.textContent = value;
+                    ageUnit.style.display = 'inline';
+                }
+            }
+
+            updateAgeDisplay(ageRange.value);
+            ageRange.addEventListener('input', () => {
+                updateAgeDisplay(ageRange.value);
+            });
+
+            catTypeInput.addEventListener('input', () => {
+                const value = catTypeInput.value.toLowerCase();
+                if (value === 'siamese') {
+                    catImage.src = 'images/siamese.jpg';
+                    catImage.style.display = 'block';
+                } else if (value === 'maine coon') {
+                    catImage.src = 'images/mainecoon.jpg';
+                    catImage.style.display = 'block';
+                } else if (value === 'persian') {
+                    catImage.src = 'images/persian.jpg';
+                    catImage.style.display = 'block';
+                } else if (value === 'sphynx') {
+                    catImage.src = 'images/sphynx.jpg';
+                    catImage.style.display = 'block';
+                } else if (value === 'tabby') {
+                    catImage.src = 'images/tabby.jpg';
+                    catImage.style.display = 'block';
+                } else {
+                    catImage.style.display = 'none';
+                }
+            });
+
+            function updateClock() {
+                const now = new Date();
+                document.getElementById('clock').textContent = now.toLocaleString();
+            }
+            setInterval(updateClock, 1000);
+            updateClock();
+
+            // Alert when user first focuses into the form
+            const form = document.querySelector('form');
+            form.addEventListener('focusin', () => {
+                alert('Welcome to the Cat Adoption Form!');
+            }, { once: true });
+
+            // Math method example: generate random Application ID
+            const randomId = Math.floor(Math.random() * 10000);
+            const appIdDiv = document.createElement('div');
+            appIdDiv.innerHTML = `<strong>Application ID: APP${randomId}</strong>`;
+            form.insertBefore(appIdDiv, form.firstChild);
+
+            // Countdown example
+            let countdownValue = 10;
+            const countdownElement = document.getElementById('countdown');
+            setInterval(() => {
+                if (countdownValue > 0) {
+                    countdownElement.textContent = `Tip refresh in: ${countdownValue} seconds`;
+                    countdownValue--;
+                } else {
+                    countdownElement.textContent = 'New tips are available!';
+                }
+            }, 1000);
+        });
+    </script>
+</head>
+<body>
+    <header>
+        <h1>Adopt a Cat</h1>
+        <div id="clock"></div>
+		<nav>
+      <ul>
+        <li>
+          <a href="index.html">Home</a>
+          <ul>
+            <li><a href="index.html#featured">Featured Cat</a></li>
+            <li><a href="index.html#welcome">Welcome</a></li>
+          </ul>
+        </li>
+        <li>
+          <a href="types.html">Types of Cats</a>
+          <ul>
+            <li><a href="types.html#persian">Persian</a></li>
+            <li><a href="types.html#siamese">Siamese</a></li>
+            <li><a href="types.html#mainecoon">Maine Coon</a></li>
+          </ul>
+        </li>
+        <li>
+          <a href="location.html">Location of Cats</a>
+          <ul>
+            <li><a href="location.html#indoor">Indoor</a></li>
+            <li><a href="location.html#outdoor">Outdoor</a></li>
+          </ul>
+        </li>
+        <li>
+          <a href="shelters.html">Local Cat Shelters</a>
+          <ul>
+            <li><a href="#happy-tails">Happy Tails Rescue</a></li>
+            <li><a href="#purrfect-home">Purrfect Home Shelter</a></li>
+            <li><a href="#feline-friends">Feline Friends Haven</a></li>
+          </ul>
+        </li>
+		<li><a href="cat_adoption.html">Adoption Form</a></li>
+      </ul>
+    </nav>
+    </header>
+
+	<div class="form">
+    <main>
+        <div id="countdown"></div>
+        <form action="submit_adoption.php" method="post">
+            <fieldset>
+                <legend>Personal Information</legend>
+
+                <label for="fullName">Full Name:</label>
+                <input type="text" id="fullName" name="fullName" required minlength="2" maxlength="50">
+
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+
+                <label for="phone">Phone Number:</label>
+                <input type="tel" id="phone" name="phone" pattern="[0-9]{10}" placeholder="1234567890" required>
+
+                <label for="dob">Date of Birth:</label>
+                <input type="date" id="dob" name="dob" required>
+            </fieldset>
+
+            <fieldset>
+                <legend>Cat Preferences</legend>
+                <div id="catPreferencesContainer">
+                    <div>
+                        <label for="catType">Preferred Cat Type:</label>
+                        <input list="catTypes" id="catType" name="catType" required>
+                        <datalist id="catTypes">
+                            <option value="Siamese">
+                            <option value="Maine Coon">
+                            <option value="Persian">
+                            <option value="Sphynx">
+                            <option value="Tabby">
+                        </datalist>
+
+                        <p>Preferred Gender:</p>
+                        <input type="radio" id="male" name="gender" value="Male" required>
+                        <label for="male">Male</label>
+
+                        <input type="radio" id="female" name="gender" value="Female">
+                        <label for="female">Female</label>
+
+                        <p>Age Range: <span id="ageValue"></span><span id="ageUnit"> years</span></p>
+                        <input type="range" id="ageRange" name="ageRange" min="0" max="20" value="10">
+
+                        <p>Special Requirements:</p>
+                        <input type="checkbox" id="goodWithDogs" name="requirements" value="Good with dogs">
+                        <label for="goodWithDogs">Good with dogs</label><br>
+
+                        <input type="checkbox" id="goodWithKids" name="requirements" value="Good with kids">
+                        <label for="goodWithKids">Good with kids</label><br>
+
+                        <input type="checkbox" id="indoorOnly" name="requirements" value="Indoor only">
+                        <label for="indoorOnly">Indoor only</label>
+                    </div>
+                    <div>
+                        <img id="catImage" alt="Selected Cat Image">
+                    </div>
+                </div>
+            </fieldset>
+
+            <fieldset id="adoptionDetails">
+                <legend>Adoption Details</legend>
+
+                <label for="shelterLocation">Preferred Shelter Location:</label>
+                <select id="shelterLocation" name="shelterLocation" required>
+                    <option value="">--Select a location--</option>
+                    <option value="Happy Tails Rescue">Happy Tails Rescue</option>
+                    <option value="Purrfect Home Shelter">Purrfect Home Shelter</option>
+                    <option value="Whisker Haven">Whisker Haven</option>
+                    <option value="Meow Manor">Meow Manor</option>
+                </select>
+
+                <label for="adoptionDate">Preferred Adoption Date and Time:</label>
+                <input type="datetime-local" id="adoptionDate" name="adoptionDate" required>
+
+                <label for="message">Additional Information:</label>
+                <textarea id="message" name="message" rows="5" cols="30" maxlength="500"></textarea>
+            </fieldset>
+
+            <div>
+                <button type="submit">Submit Application</button>
+                <button type="reset">Reset Form</button>
+            </div>
+        </form>
+    </main>
+	</div>
+
+    <footer>
+        <p>&copy; 2025 Happy Tails Rescue</p>
+    </footer>
+</body>
+</html>

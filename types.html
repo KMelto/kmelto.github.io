@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Types of Cats - All About Cats">
+  <title>Types of Cats</title>
+  <link rel="stylesheet" href="styles_format.css">
+  <link rel="stylesheet" href="styles_layout.css">
+  <script>
+            function updateClock() {
+                const now = new Date();
+                document.getElementById('clock').textContent = now.toLocaleString();
+            }
+            setInterval(updateClock, 1000);
+            updateClock();
+  </script>
+</head>
+<body>
+  <header>
+    <h1>Types of Cats</h1>
+	<div id="clock"></div>
+    <nav>
+      <ul>
+        <li>
+          <a href="index.html">Home</a>
+          <ul>
+            <li><a href="index.html#featured">Featured Cat</a></li>
+            <li><a href="index.html#welcome">Welcome</a></li>
+          </ul>
+        </li>
+        <li>
+          <a href="types.html">Types of Cats</a>
+          <ul>
+            <li><a href="#persian">Persian</a></li>
+            <li><a href="#siamese">Siamese</a></li>
+            <li><a href="#mainecoon">Maine Coon</a></li>
+          </ul>
+        </li>
+        <li>
+          <a href="location.html">Location of Cats</a>
+          <ul>
+            <li><a href="location.html#indoor">Indoor</a></li>
+            <li><a href="location.html#outdoor">Outdoor</a></li>
+          </ul>
+        </li>
+       <li>
+          <a href="shelters.html">Local Cat Shelters</a>
+          <ul>
+            <li><a href="#happy-tails">Happy Tails Rescue</a></li>
+            <li><a href="#purrfect-home">Purrfect Home Shelter</a></li>
+            <li><a href="#feline-friends">Feline Friends Haven</a></li>
+          </ul>
+        </li>
+		<li><a href="cat_adoption.html">Adoption Form</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <div class="container">
+    <aside class="sidebar">
+      <h3>Breeds Tip</h3>
+      <p>Each breed has a unique personality and care requirement. Choose wisely!</p>
+    </aside>
+
+    <main class="content">
+      <div class="feature-box">Top Breed This Month</div>
+      <section>
+        <h2 id="popular">Popular Breeds</h2>
+
+        <article id="persian">
+          <h3>Persian</h3>
+          <img src="images/persian.jpg" alt="Fluffy white Persian cat" width="300">
+          <p>Persian cats are known for their luxurious, long coats and sweet personalities. They prefer quiet environments and enjoy lounging on soft surfaces. These cats require regular grooming due to their thick fur, and they thrive in a calm household.</p>
+        </article>
+
+        <article id="siamese">
+          <h3>Siamese</h3>
+          <img src="images/siamese.jpg" alt="Siamese cat with blue eyes and point coloration" width="300">
+          <p>Siamese cats are vocal, social, and extremely loyal to their owners. They have a sleek, elegant body with striking blue eyes and pointed coloration. These cats are very interactive and enjoy mental stimulation and companionship.</p>
+        </article>
+
+        <article id="mainecoon">
+          <h3>Maine Coon</h3>
+          <img src="images/mainecoon.jpg" alt="Large Maine Coon cat with a bushy tail" width="300">
+          <p>Maine Coons are one of the largest domesticated cat breeds. They are gentle giants known for their dog-like behavior and intelligence. With their thick, shaggy coats and bushy tails, they adapt well to colder climates. They're also very playful and affectionate.</p>
+        </article>
+
+        <article id="sphynx">
+          <h3>Sphynx</h3>
+          <img src="images/sphynx.jpg" alt="Hairless Sphynx cat" width="300">
+          <p>The Sphynx is a hairless breed with a warm, suede-like skin. They are energetic, curious, and love being the center of attention. Despite their lack of fur, they need regular bathing to remove skin oils. Sphynx cats are ideal for owners looking for an affectionate and quirky companion.</p>
+        </article>
+		
+		<article id="tabby">
+          <h3>Tabby</h3>
+          <img src="images/tabby.jpg" alt="Tabby cat" width="300">
+           <p>Tabby cats are known for their distinct striped, swirled, or spotted coats and their friendly, playful personalities.</p>
+        </article>
+
+      </section>
+    </main>
+  </div>
+
+  <footer>
+    <p>&copy; 2025 All About Cats. All rights reserved.</p>
+  </footer>
+</body>
+</html>

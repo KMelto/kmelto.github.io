@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Homepage - All About Cats">
+  <title>All About Cats</title>
+  <link rel="stylesheet" href="styles_format.css">
+  <link rel="stylesheet" href="styles_layout.css">
+  <script>
+            function updateClock() {
+                const now = new Date();
+                document.getElementById('clock').textContent = now.toLocaleString();
+            }
+            setInterval(updateClock, 1000);
+            updateClock();
+  </script>
+</head>
+<body>
+  <header>
+    <h1>All About Cats</h1>
+	<div id="clock"></div>
+    <nav>
+      <ul>
+        <li>
+          <a href="index.html">Home</a>
+          <ul>
+            <li><a href="#featured">Featured Cat</a></li>
+            <li><a href="#welcome">Welcome</a></li>
+          </ul>
+        </li>
+        <li>
+          <a href="types.html">Types of Cats</a>
+          <ul>
+            <li><a href="types.html#persian">Persian</a></li>
+            <li><a href="types.html#siamese">Siamese</a></li>
+            <li><a href="types.html#mainecoon">Maine Coon</a></li>
+          </ul>
+        </li>
+        <li>
+          <a href="location.html">Location of Cats</a>
+          <ul>
+            <li><a href="location.html#indoor">Indoor</a></li>
+            <li><a href="location.html#outdoor">Outdoor</a></li>
+          </ul>
+        </li>
+        <li>
+          <a href="shelters.html">Local Cat Shelters</a>
+          <ul>
+            <li><a href="#happy-tails">Happy Tails Rescue</a></li>
+            <li><a href="#purrfect-home">Purrfect Home Shelter</a></li>
+            <li><a href="#feline-friends">Feline Friends Haven</a></li>
+          </ul>
+        </li>
+		<li><a href="cat_adoption.html">Adoption Form</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <div class="container">
+    <aside class="sidebar">
+      <h3>Cat Wisdom</h3>
+      <p>"Time spent with cats is never wasted." &mdash; Sigmund Freud</p>
+    </aside>
+
+    <main class="content">
+      <div class="feature-box">Welcome Cat Lovers!</div>
+      <section id="welcome">
+        <h2>Welcome to All About Cats</h2>
+        <p>Cats are <strong>curious</strong>, <em>graceful</em>, and full of personality. Whether you're looking for a new feline friend or just love learning about them, you're in the right place!</p>
+        <p>Did you know that cats have been domesticated for over 9,000 years? They were even considered sacred in ancient Egypt &mdash; quite the <q>purr-fect</q> creatures!</p>
+      </section>
+
+      <section id="featured">
+        <h2>Featured Cat</h2>
+        <figure>
+          <img src="images/tabby.jpg" alt="A cute tabby cat" width="400">
+          <figcaption>This adorable tabby is one of the most common domestic cats.</figcaption>
+        </figure>
+      </section>
+    </main>
+  </div>
+
+  <footer>
+    <p>&copy; 2025 All About Cats. All rights reserved.</p>
+  </footer>
+</body>
+</html>

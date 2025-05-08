@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Location of Cats - All About Cats">
+  <title>Location of Cats</title>
+  <link rel="stylesheet" href="styles_format.css">
+  <link rel="stylesheet" href="styles_layout.css">
+  <script>
+            function updateClock() {
+                const now = new Date();
+                document.getElementById('clock').textContent = now.toLocaleString();
+            }
+            setInterval(updateClock, 1000);
+            updateClock();
+  </script>
+</head>
+<body>
+  <header>
+    <h1>Location of Cats</h1>
+	<div id="clock"></div>
+    <nav>
+      <ul>
+        <li>
+          <a href="index.html">Home</a>
+          <ul>
+            <li><a href="index.html#featured">Featured Cat</a></li>
+            <li><a href="index.html#welcome">Welcome</a></li>
+          </ul>
+        </li>
+        <li>
+          <a href="types.html">Types of Cats</a>
+          <ul>
+            <li><a href="types.html#persian">Persian</a></li>
+            <li><a href="types.html#siamese">Siamese</a></li>
+            <li><a href="types.html#mainecoon">Maine Coon</a></li>
+          </ul>
+        </li>
+        <li>
+          <a href="location.html">Location of Cats</a>
+          <ul>
+            <li><a href="#indoor">Indoor</a></li>
+            <li><a href="#outdoor">Outdoor</a></li>
+          </ul>
+        </li>
+        <li>
+          <a href="shelters.html">Local Cat Shelters</a>
+          <ul>
+            <li><a href="#happy-tails">Happy Tails Rescue</a></li>
+            <li><a href="#purrfect-home">Purrfect Home Shelter</a></li>
+            <li><a href="#feline-friends">Feline Friends Haven</a></li>
+          </ul>
+        </li>
+		<li><a href="cat_adoption.html">Adoption Form</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <div class="container">
+    <aside class="sidebar">
+      <h3>Observation</h3>
+      <p>Cats often choose warm, quiet places like sunny windows or cozy boxes.</p>
+    </aside>
+
+    <main class="content">
+      <div class="feature-box">Location Fact</div>
+      <section>
+        <h2>Where Cats Are Found</h2>
+
+        <article id="indoor">
+          <h3>Indoor Cats</h3>
+          <p>Indoor cats live inside homes or apartments. They typically enjoy cozy spots, high perches, and lots of human interaction.</p>
+        </article>
+
+        <article id="outdoor">
+          <h3>Outdoor Cats</h3>
+          <p>Outdoor cats roam freely and may live in urban, suburban, or rural settings. They often seek shelter in porches, garages, or quiet alleys.</p>
+        </article>
+
+        <figure>
+          <img src="images/stray-cat.jpg" alt="Stray cat on the street" width="400">
+          <figcaption>A common sight: a stray cat exploring the city.</figcaption>
+        </figure>
+      </section>
+    </main>
+  </div>
+
+  <footer>
+    <p>&copy; 2025 All About Cats. All rights reserved.</p>
+  </footer>
+</body>
+</html>

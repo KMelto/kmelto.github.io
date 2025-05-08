@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Local Cat Shelters - All About Cats">
+  <title>Local Cat Shelters</title>
+  <link rel="stylesheet" href="styles_format.css">
+  <link rel="stylesheet" href="styles_layout.css">
+  <script>
+          function updateClock() {
+                const now = new Date();
+                document.getElementById('clock').textContent = now.toLocaleString();
+            }
+            setInterval(updateClock, 1000);
+            updateClock();
+  </script>
+</head>
+<body>
+  <header>
+    <h1>Local Cat Shelters</h1>
+	<div id="clock"></div>
+    <nav>
+      <ul>
+        <li>
+          <a href="index.html">Home</a>
+          <ul>
+            <li><a href="index.html#featured">Featured Cat</a></li>
+            <li><a href="index.html#welcome">Welcome</a></li>
+          </ul>
+        </li>
+        <li>
+          <a href="types.html">Types of Cats</a>
+          <ul>
+            <li><a href="types.html#persian">Persian</a></li>
+            <li><a href="types.html#siamese">Siamese</a></li>
+            <li><a href="types.html#mainecoon">Maine Coon</a></li>
+          </ul>
+        </li>
+        <li>
+          <a href="location.html">Location of Cats</a>
+          <ul>
+            <li><a href="location.html#indoor">Indoor</a></li>
+            <li><a href="location.html#outdoor">Outdoor</a></li>
+          </ul>
+        </li>
+        <li>
+          <a href="shelters.html">Local Cat Shelters</a>
+          <ul>
+            <li><a href="#happy-tails">Happy Tails Rescue</a></li>
+            <li><a href="#purrfect-home">Purrfect Home Shelter</a></li>
+            <li><a href="#feline-friends">Feline Friends Haven</a></li>
+          </ul>
+        </li>
+		<li><a href="cat_adoption.html">Adoption Form</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <div class="container">
+    <aside class="sidebar">
+      <h3>Quick Info</h3>
+      <p>Cats need love, care, and a safe space to call home. Consider adopting today!</p>
+    </aside>
+
+    <main class="content">
+      <div class="feature-box">Featured Shelter of the Month</div>
+      <section>
+        <h2>Find a Shelter Near You</h2>
+
+        <article id="happy-tails">
+          <h3>Happy Tails Rescue</h3>
+          <p>Located at 123 Cat Lane, Happy Tails Rescue is known for its compassionate staff and well-maintained facilities. They offer adoption events every weekend.</p>
+        </article>
+
+        <article id="purrfect-home">
+          <h3>Purrfect Home Shelter</h3>
+          <p>Purrfect Home Shelter, at 456 Whisker Blvd, is a cozy and loving environment for cats awaiting adoption. They also host educational programs about feline care.</p>
+        </article>
+
+        <article id="feline-friends">
+          <h3>Feline Friends Haven</h3>
+          <p>Located at 789 Meow Ave, this no-kill shelter specializes in senior cats and cats with special needs. Feline Friends Haven is supported by a strong volunteer network.</p>
+        </article>
+
+      </section>
+    </main>
+  </div>
+
+  <footer>
+    <p>&copy; 2025 All About Cats. All rights reserved.</p>
+  </footer>
+</body>
+</html>

@@ -1,0 +1,61 @@
+
+body {
+  background-color: tan;
+  color: darkred;
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+header, footer {
+  background-color: #d2b48c;
+  padding: 1em;
+  text-align: center;
+}
+
+h1, h2 {
+  color: maroon;
+}
+
+
+nav ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+nav ul li {
+  display: inline;
+  margin-right: 15px;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: darkred;
+}
+
+
+nav ul li a:hover {
+  font-weight: bold;
+  text-decoration: underline;
+  color: #800000;
+}
+
+nav ul li a:visited {
+  color: blue;
+}
+
+legend{
+	font-weight:bold;
+}
+main figure {
+  border: 2px solid maroon;
+  padding: 10px;
+  background-color: #fdf6e3;
+}
+
+input:focus:valid, textarea:focus:valid, select:focus:valid {
+	border: 2px solid green;
+}
+input:focus:invalid, textarea:focus:invalid, select:focus:invalid {
+	border: 2px solid red;
+}
