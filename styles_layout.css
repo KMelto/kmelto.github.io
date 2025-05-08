@@ -19,6 +19,8 @@
   padding: 1em;
   float: left;
   width: 80%;
+  max-height: 600px;
+  overflow-y: auto
 }
 
 .content {
